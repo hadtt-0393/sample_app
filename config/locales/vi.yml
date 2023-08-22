@@ -21,9 +21,15 @@ vi:
     header:
       appName: "Sample App"
       title: "Ruby on Rails Tutorial Sample App"
+      toggle_navigation: "Chuyển đổi điều hướng"
       help: *help
       home: *home
       login: "Đăng nhập"
+      users: "Người dùng"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+      account: "Tài khoản"
     footer:
       description: <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> tạo bởi <a href="https://www.michaelhartl.com/">Michael Hartl</a>
       about: *about
@@ -46,3 +52,11 @@ vi:
     error_messages:
       error_total: "Biểu mẫu chứa"
       error: "Lỗi"
+  sessions:
+    new:
+      login: "Đăng nhập"
+      password: "Mật khẩu"
+      form_submit: "Đăng ký ngay!"
+      new_user?: "Người dùng mới?"
+    create:
+      invalid_login: "Kết hợp email/mật khẩu không chính xác"
