@@ -1,0 +1,6 @@
+digits:
+  length_6: 6
+  length_50: 50
+  length_255: 255
+email:
+  regex: !ruby/regexp/ \A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
