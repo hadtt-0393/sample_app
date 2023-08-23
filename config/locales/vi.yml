@@ -58,5 +58,6 @@ vi:
       password: "Mật khẩu"
       form_submit: "Đăng ký ngay!"
       new_user?: "Người dùng mới?"
+      remember: "Nhớ tôi trên máy tính này"
     create:
       invalid_login: "Kết hợp email/mật khẩu không chính xác"
