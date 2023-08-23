@@ -21,9 +21,15 @@ en:
     header:
       appName: "Sample App"
       title: "Ruby on Rails Tutorial Sample App"
+      toggle_navigation: "Toggle navigation"
       help: *help
       home: *home
       login: "Login"
+      users: "Users"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      account: "Account"
     footer:
       description: The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> by <a href="https://www.michaelhartl.com/">Michael Hartl</a>
       about: *about
@@ -46,3 +52,11 @@ en:
     error_messages:
       error_total: "The form contains"
       error: "error"
+  sessions:
+    new:
+      login: "Log in"
+      password: "Password"
+      form_submit: "Sign up now!"
+      new_user?: "New user?"
+    create:
+      invalid_login: "Invalid email/password combination"
