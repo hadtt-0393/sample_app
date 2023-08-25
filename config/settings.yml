@@ -1,5 +1,6 @@
 digits:
   length_6: 6
+  length_30: 30
   length_50: 50
   length_255: 255
 email:
