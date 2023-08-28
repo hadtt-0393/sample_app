@@ -1,20 +1,23 @@
 class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  has_many :microposts, dependent: :destroy
+
+  validates :email, format: {with: Settings.email.regex},
+                    presence: true,
+                    uniqueness: true,
+                    length: {maximum: Settings.digits.length_255}
+  has_secure_password
+  validates :password, presence: true,
+                      length: {minimum: Settings.digits.length_6},
+                      allow_nil: true
+  validates :name, presence: true,
+                  length: {maximum: Settings.digits.length_50}
+  scope :by_earliest_created, ->{order(created_at: :asc)}
+
   before_save   :downcase_email
   before_create :create_activation_digest
 
-  validates :name, presence: true,
-            length: {maximum: Settings.digits.length_50}
-  validates :email, presence: true,
-            length: {maximum: Settings.digits.length_255},
-            format: {with: Settings.email.regex},
-            uniqueness: true
-  has_secure_password
-  validates :password, presence: true,
-            length: {minimum: Settings.digits.length_6},
-            allow_nil: true
-  scope :by_earliest_created, ->{order(created_at: :asc)}
   class << self
     # Returns the hash digest of the given string.
     def digest string
@@ -31,6 +34,7 @@ class User < ApplicationRecord
       SecureRandom.urlsafe_base64
     end
   end
+
   # Remembers a user in the database for use in persistent sessions.
   def remember
     self.remember_token = User.new_token
@@ -86,6 +90,12 @@ class User < ApplicationRecord
   # Returns true if a password reset has expired.
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  # Defines a proto-feed.
+  # See "Following users" for the full implementation.
+  def feed
+    microposts
   end
 
   private

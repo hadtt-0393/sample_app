@@ -15,6 +15,7 @@ vi:
       title: "Chào mừng đến với sample app"
       description: Đây là trang chủ của dự án mẫu sử dụng <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>.
       sign_up: &sign_up "Đăng ký ngay"
+      micropost_feed: "Các bài tương tác"
   layouts:
     application:
       english: "Tiếng Anh"
@@ -65,10 +66,18 @@ vi:
       delete_confirm: "Bạn chắc chứ?"
       delete: "Xóa"
     user_not_found: "Người dùng không tồn tại!"
+    show:
+      microposts: "Bài đăng nhỏ"
   shared:
     error_messages:
       error_total: "Biểu mẫu chứa"
       error: "Lỗi"
+    micropost_form:
+      textarea_placeholder: "Soạn bài đăng mới..."
+      post: "Đăng"
+    user_info:
+      micropost: "bài đăng"
+      view_my_profile: "Xem hồ sơ của tôi"
   sessions:
     new:
       login: "Đăng nhập"
@@ -130,3 +139,19 @@ vi:
     flash_check_expiration_danger: "Đặt lại mật khẩu đã hết hạn."
     flash_get_user_danger: "Không tìm thấy người dùng!"
     flash_valid_user_danger: "Người dùng chưa được kích hoạt!"
+  microposts:
+    micropost:
+      posted: "Được đăng"
+      ago: "trước."
+      delete: "Xóa"
+      you_sure?: "Bạn chắc chứ?"
+    create:
+      flash_create_success: "Tạo bài đăng thành công!"
+    destroy:
+      flash_destroy_success: "Đã xóa bài đăng"
+      flash_destroy_danger: "Xóa thất bại"
+    flash_correct_user_danger: "Bài đăng không hợp lệ"
+  content_type_message: "phải là định dạng hình ảnh hợp lệ"
+  size_message: "phải nhỏ hơn 5 MB"
+  application:
+    flash_logged_in_user_danger: "Hãy đăng nhập trước đó."
