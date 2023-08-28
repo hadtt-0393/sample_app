@@ -10,10 +10,11 @@ class Micropost < ApplicationRecord
                            message: I18n.t(".size_message")}
 
   scope :latest, ->{order created_at: :desc}
+  scope :by_user_ids, ->(user_ids){where user_id: user_ids}
 
   delegate :name, to: :user, prefix: true, allow_nil: true
 
   def display_image
-    image.variant(resize_to_limit: [500, 500])
+    image.variant(resize_to_limit: Settings.model.image_size_limit)
   end
 end
