@@ -9,7 +9,10 @@ class UsersController < ApplicationController
                          items: Settings.digits.length_30
   end
 
-  def show; end
+  def show
+    @pagy, @microposts = pagy @user.microposts,
+                              items: Settings.digits.length_30
+  end
 
   def new
     @user = User.new

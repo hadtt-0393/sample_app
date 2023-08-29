@@ -8,7 +8,7 @@ class AccountActivationsController < ApplicationController
       flash[:success] = t ".edit_success"
       redirect_to @user
     else
-      flash[:danger] = ".edit_danger"
+      flash[:danger] = t ".edit_danger"
       redirect_to root_url
     end
   end

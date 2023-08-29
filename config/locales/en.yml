@@ -15,6 +15,7 @@ en:
       title: "Welcome to the Sample App"
       description: This is the home page for the <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> sample application.
       sign_up: &sign_up "Sign up now!"
+      micropost_feed: "Micropost Feed"
   layouts:
     application:
       english: "English"
@@ -65,10 +66,18 @@ en:
       delete_confirm: "You sure?"
       delete: "Delete"
     user_not_found: "User not found!"
+    show:
+      microposts: "Microposts"
   shared:
     error_messages:
       error_total: "The form contains"
       error: "error"
+    micropost_form:
+      textarea_placeholder: "Compose new micropost..."
+      post: "Post"
+    user_info:
+      micropost: "micropost"
+      view_my_profile: "View my profile"
   sessions:
     new:
       login: "Log in"
@@ -130,3 +139,19 @@ en:
     flash_check_expiration_danger: "Password reset has expired."
     flash_get_user_danger: "User not found!"
     flash_valid_user_danger: "User is in_actived!"
+  microposts:
+    micropost:
+      posted: "Posted"
+      ago: "ago."
+      delete: "Delete"
+      you_sure?: "You sure?"
+    create:
+      flash_create_success: "Micropost created!"
+    destroy:
+      flash_destroy_success: "Micropost deleted"
+      flash_destroy_danger: "Deleted fail"
+    flash_correct_user_danger: "Micropost invalid"
+  content_type_message: "must be a valid image format"
+  size_message: "should be less than 5MB"
+  application:
+    flash_logged_in_user_danger: "Please log in."
